@@ -11,10 +11,16 @@
 	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="apple-touch-icon" href="logo-192.png">
-
-	<!-- Sapper creates a <script> tag containing `src/client.js`
+	<link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css">
+	<link rel="stylesheet" href="css/app.v1.css" type="text/css">
+<!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
+		 <script defer src="js/app.v1.js"></script>
+		 <script defer src="js/app.plugin.js"></script>
+		 <script defer type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+		 <script defer type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+		 <script defer type="text/javascript" src="js/jPlayer/demo.js" gapi_processed="true"></script>
 	%sapper.scripts%
 
 	<!-- Sapper generates a <style> tag containing critical CSS
@@ -26,7 +32,7 @@
 	     the current page has one -->
 	%sapper.head%
 </head>
-<body>
+<body class="app js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie8 no-ie10 no-ie11 no-ios no-ios7 ipad">
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id="sapper">%sapper.html%</div>
